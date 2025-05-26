@@ -4,7 +4,6 @@ import EntryComponent from '../../forms/Category/Entrycomponent';
 import TableComponent from "../../forms/Category/Table.component";
 import CommonAPISave from "app/Components/CommonAPISave";
 import showToast from '../../../utils/toastService';
-import Sidebar from "../../Components/Sidebar";
 import { ToastContainer } from "react-toastify";
 import { RiMenuFold2Line, RiMenuFoldLine } from "react-icons/ri";
 import ViewCard from "../../Components/helperComponents/ViewCard";
@@ -71,16 +70,8 @@ export default function CategoryMaster() {
         >
             <div className="flex h-screen bg-gray-100">
                 <ToastContainer />
-                <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
                 <section className="flex-1 overflow-hidden relative">
-                    <div className="sticky top-0 z-10 bg-gray-200 h-10 flex items-center px-2 text-black gap-2">
-                        {isOpen ? (
-                            <RiMenuFoldLine onClick={toggleSidebar} className="w-5 h-5 cursor-pointer" />
-                        ) : (
-                            <RiMenuFold2Line onClick={toggleSidebar} className="w-5 h-5 cursor-pointer" />
-                        )}
-                        <span className="text-sm font-medium">Category</span>
-                    </div>
+                    
 
                     <section className="h-full overflow-y-auto px-2 pb-4">
                         {!showEntry && !isView && (

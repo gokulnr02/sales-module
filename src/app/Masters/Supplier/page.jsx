@@ -4,7 +4,6 @@ import EntryComponent from '../../forms/Supplier/Entrycomponent';
 import TableComponent from "../../forms/Supplier/Table.component";
 import CommonAPISave from "app/Components/CommonAPISave";
 import showToast from '../../../utils/toastService';
-import Sidebar from "../../Components/Sidebar";
 import { ToastContainer } from "react-toastify";
 import { RiMenuFold2Line, RiMenuFoldLine } from "react-icons/ri";
 import ViewCard from "../../Components/helperComponents/ViewCard";
@@ -87,24 +86,14 @@ export default function SupplierMaster() {
                 isEdit, isView,columns,selectedRow
             }}
         >
-            <div className="flex h-screen bg-gray-100">
+            <div className="flex h-screen bg-gray-50">
                 <ToastContainer />
-                <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
                 <section className="flex-1 overflow-hidden relative">
-                    <div className="sticky top-0 z-10 bg-gray-200 h-10 flex items-center px-2 text-black gap-2">
-                        {isOpen ? (
-                            <RiMenuFoldLine onClick={toggleSidebar} className="w-5 h-5 cursor-pointer" />
-                        ) : (
-                            <RiMenuFold2Line onClick={toggleSidebar} className="w-5 h-5 cursor-pointer" />
-                        )}
-                        <span className="text-sm font-medium">Supplier</span>
-                    </div>
-
                     <section className="h-full overflow-y-auto px-2 pb-4">
                         {!showEntry && !isView && (
                             <div className="py-2 flex justify-end px-3">
                                 <button
-                                    className="bg-blue-400  px-4 py-2 rounded hover:bg-blue-500 text-sm font-semibold"
+                                    className="bg-blue-400  px-4 py-1 rounded hover:bg-blue-500 text-sm font-semibold"
                                     onClick={() => {
                                         setShowEntry(true);
                                         setIsEdit(false);
@@ -112,7 +101,7 @@ export default function SupplierMaster() {
                                         dispatch({ type: "RESET" });
                                     }}
                                 >
-                                    Add New Supplier
+                                    Add Customer
                                 </button>
                             </div>
                         )}

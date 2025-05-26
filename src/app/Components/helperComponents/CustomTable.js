@@ -34,7 +34,7 @@ const CustomTable = ({
   };
 
   return (
-    <div className="w-full p-2 overflow-auto">
+    <div className="w-full p-2 overflow-auto ">
       <TableContainer component={Paper}
        sx={{ maxHeight: 500, overflowY: "auto" }}>
         <Table stickyHeader>

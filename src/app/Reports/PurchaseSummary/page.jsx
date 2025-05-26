@@ -31,7 +31,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     };
 
     return (
-        <div className={`bg-gray-900 text-white w-[230px] min-h-screen p-5 transition-all ${isOpen ? "block" : "hidden"}`}>
+        <div className={`bg-gray-900 text-white w-[200px] min-h-screen p-5 transition-all ${isOpen ? "block" : "hidden"}`}>
             <div className="flex justify-between items-center">
                 <Image src="/images/BrandLogo.jpg" alt="Brand Logo" width={170} height={0} className="w-[120px] sm:w-[140px] md:w-[170px]" />
                 <button onClick={toggleSidebar} className="md:hidden">

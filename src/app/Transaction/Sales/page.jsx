@@ -229,17 +229,10 @@ const ItemMaster = () => {
     return (
         <div className="flex h-screen">
             <ToastContainer />
-            {/* Sidebar */}
-            <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-
+           
             {/* Main Content Area */}
             <section className="flex-1 h-full">
-                <div className="w-full h-10 bg-gray-200 flex items-center px-2 text-black gap-2">
-                    {isOpen ? <RiMenuFoldLine onClick={toggleSidebar} className="w-5 h-5 cursor-pointer" /> :
-                        <RiMenuFold2Line onClick={toggleSidebar} className="w-5 h-5 cursor-pointer" />}
-                    <span className="text-sm font-medium">Purchase Entry</span>
-                </div>
-
+               
                 <div className="w-full h-36 flex justify-between items-start p-2">
                     <div className="w-[280px] h-full flex flex-col gap-2 justify-start items-start">
                         <div className="relative w-full h-[28px] flex justify-start items-center">
