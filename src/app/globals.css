@@ -19,8 +19,7 @@
 
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+ 
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   width: 100%;
   height: 100%;
