@@ -3,13 +3,81 @@
 @tailwind utilities;
 
 
+/* styles/globals.css */
 
+/* Arboria - Bold (700) */
+@font-face {
+  font-family: 'arboria';
+  src: url('https://assets-v2.lottiefiles.com/fonts/Arboria-Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Arboria - Black (900) */
+@font-face {
+  font-family: 'arboria';
+  src: url('https://assets-v2.lottiefiles.com/fonts/Arboria-Black.woff') format('woff');
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* Karla - ExtraLight (200) */
+@font-face {
+  font-family: 'karla';
+  src: url('https://assets-v2.lottiefiles.com/fonts/Karla-ExtraLight.woff') format('woff');
+  font-style: normal;
+  font-weight: 200;
+}
+
+/* Karla - Light (300) */
+@font-face {
+  font-family: 'karla';
+  src: url('https://assets-v2.lottiefiles.com/fonts/Karla-Light.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* Karla - Regular (400) */
+@font-face {
+  font-family: 'karla';
+  src: url('https://assets-v2.lottiefiles.com/fonts/Karla-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Karla - Medium (500) */
+@font-face {
+  font-family: 'karla';
+  src: url('https://assets-v2.lottiefiles.com/fonts/Karla-Medium.woff') format('woff');
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Karla - SemiBold (600) */
+@font-face {
+  font-family: 'karla';
+  src: url('https://assets-v2.lottiefiles.com/fonts/Karla-SemiBold.woff') format('woff');
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Karla - Bold (700) */
+@font-face {
+  font-family: 'karla';
+  src: url('https://assets-v2.lottiefiles.com/fonts/Karla-Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
 
 
 
 body {
- 
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: 'karla', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  /* 150% = 1.5 */
+  color: rgba(32, 39, 44, 1);
   width: 100%;
   height: 100%;
   overflow: hidden !important;
@@ -393,4 +461,36 @@ body {
   padding: 0px 10px;
   border-radius: 4px;
   letter-spacing: 0.6px !important;
+}
+
+
+.topNav{
+  width: 100%;
+  height: 30px;
+  /* position: fixed; */
+  /* padding: 10px 10px; */
+  display: flex;
+  justify-content: center;
+}
+
+.serachDiv{
+  width: 100%;
+  border: 1px solid #ddd;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchInput{
+  font-family: 'karla', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
 }

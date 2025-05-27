@@ -68,12 +68,12 @@ export default function Salesmodulelayout({ children }) {
             return (
               <div
                 key={index}
-                className={`flex items-center  cursor-pointer transition-all text-sm font-medium border-b-2 ${
+                className={`flex items-center gap-2 cursor-pointer transition-all text-sm font-medium border-b-2 ${
                   isActive
                     ? "border-red-500 bg-gray-100"
                     : "border-transparent hover:text-black hover:bg-gray-200"
                 }`}
-                style={{ color: isActive ? "blue" : "gray" ,height: "30px", padding: "0 10px" }}
+                style={{ color: isActive ? "blue" : "gray" ,height: "35px", padding: "0 10px" }}
                 onClick={() => handleSelectActiveMenu(menu)}
               >
                 <span>{menu.name}</span>
@@ -91,23 +91,9 @@ export default function Salesmodulelayout({ children }) {
           })}
         </div>
 
-        {/* Breadcrumb */}
-        <div className="px-3 py-1 font-medium bg-white border-b text-gray-700" style={{fontSize: "11px"}}>
-          {activePath
-            ? activePath
-                .split("/")
-                .filter(Boolean)
-                .map((part, idx, arr) => (
-                  <span key={idx}>
-                    {part.charAt(0).toUpperCase() + part.slice(1)}
-                    {idx < arr.length - 1 && <span className="mx-1">{" > "}</span>}
-                  </span>
-                ))
-            : ""}
-        </div>
 
         {/* Main Content */}
-        <div className="flex-1 ">{children}</div>
+        <div className="flex-1 " style={{backgroundColor:'#f3f6f8'}}>{children}</div>
       </div>
     </div>
   );

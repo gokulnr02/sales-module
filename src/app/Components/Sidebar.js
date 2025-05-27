@@ -3,7 +3,7 @@ import {
   ChevronDown,
   ChevronUp,
   Menu,
-  LogOut, DatabaseZap, UserRoundPlus, BadgeIndianRupee,
+  LogOut, DatabaseZap, UserRoundPlus, BadgeIndianRupee,Search
   
 } from "lucide-react";
 import Image from "next/image";
@@ -65,11 +65,12 @@ export default function Sidebar({ isCollapsed, toggleCollapse, onMenuSelect }) {
 
   return (
     <div
-      className={`transition-all duration-300 ease-in-out h-screen bg-white shadow-xl flex flex-col relative ${isCollapsed ? "w-[50px]" : "w-[250px]"
+      style={{padding:'10px'}}
+      className={`transition-all duration-300 ease-in-out h-screen bg-white border-r flex flex-col gap-2 relative ${isCollapsed ? "w-[50px]" : "w-[250px]"
         }`}
     >
       {/* Top Bar */}
-      <div className="h-12 px-2 flex items-center justify-center border-b border-gray-200">
+      <div className="h-auto px-2 flex items-center  ">
         {!isCollapsed ? (
           <Image
             src="/images/BrandLogo.jpg"
@@ -84,8 +85,15 @@ export default function Sidebar({ isCollapsed, toggleCollapse, onMenuSelect }) {
 
       </div>
 
+         <div className="topNav">
+          <div className="serachDiv">
+            <Search style={{ color: "#63727e" }} />
+            <input placeholder="Search Gokul's Workspace" className="searchInput" />
+          </div>
+        </div>
+
       {/* Menu List */}
-      <div className="flex-1 overflow-y-auto no-scrollbar px-2 py-4">
+      <div className="flex-1 overflow-y-auto no-scrollbar  ">
         {menu
           .filter((item) => item.visibile)
           .map((item, idx) => {

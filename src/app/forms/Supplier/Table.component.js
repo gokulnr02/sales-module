@@ -100,18 +100,18 @@ const TableComponent = forwardRef((props, ref) => {
 
   return (
     <div className="p-2">
-      <div className="flex justify-between w-full gap-4 mb-2 px-3">
+      <div className="flex justify-between w-full gap-4 mb-2 ">
         <h2 className="text-sm font-semibold text-gray-700  ">Supplier List  ({totalCount})
           <IconButton color="primary" title="Refresh" aria-label="Refresh" >
             <RefreshIcon fontSize="small" onClick={fetchSupplier} />
           </IconButton>
         </h2>
 
-        <div className="w-[250px]">
+        <div className="serachDiv" style={{width:'250px',borderRadius:'5px'}}>
           <input
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
-            className="EntryInputField100"
+            className="searchInput px-3"
             placeholder="Search by name/code"
           />
         </div>
